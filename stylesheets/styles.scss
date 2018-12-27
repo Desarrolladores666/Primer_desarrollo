@@ -6,6 +6,7 @@
     @return #{$remSize}rem;
 }
 $firstColor:#05a081;
+$shadeGreencolor: #058a6f;
 $secondColor:#E04252;
 $thirdColor:#A9196F;
 //shadesColor
@@ -72,6 +73,8 @@ ul,ol,li{
         line-height: 1px;
     };
 }
+.angle-top:hover{background-color: $secondColor;}
+.angle-top:active{background-color: $secondColor;}
 ///////////////////////
 //HEADER
 ///////////////////////
@@ -115,6 +118,8 @@ header{
             border-radius: Rem(2);
             width: Rem(25)
         }
+        button:hover{background: $shadeGreencolor;}
+        button:active{background:$firstColor;}
         ul#menu{
             margin-top: Rem(30);
             display:none;
@@ -141,10 +146,13 @@ section.hero{
     background:url('../images/pexels-photo-8949.jpg') no-repeat center top;
     background-size: cover;
     background-attachment: fixed;
-    height:75vh;
-    padding-top: 25vh;
-    text-align: center;  
+    height:100vh;
+    overflow: hidden;
+    text-align: center;
+    position: relative;  
+    .hero-contact{display: none;}
     h1{
+        padding-top: 25vh;
         font-size: Rem(48);
         line-height: Rem(12);
         font-weight: bold;
@@ -273,8 +281,10 @@ footer{
 //BREAKPOINT MIN-WIDTH 736PX
 //////////////////////////////////////////////////////////////////////
 @media only screen and (min-width: 768px){
+//////////////////////////
+//HEADER
+//////////////////////////
     header{
-
         nav{
 
             display: flex;
@@ -292,4 +302,57 @@ footer{
             }
         }
     }
+//////////////////////////
+//HERO-SECTION
+//////////////////////////
+section.hero{
+    .container{
+        .hero-main{
+
+            h1{
+                font-size: Rem(60);
+            }
+            p{
+                font-size: Rem(25);
+            }
+        }
+        .hero-contact{
+            display: block;
+            width: 45vh;
+            position: absolute;
+            color:#fff;
+            height: 100vh;
+            background: linear-gradient(rgba(35, 42, 52,.5),rgba(35, 42, 52,.5));
+            h2{
+                padding-top: 10vh;
+                animation-delay: 1s
+            }
+            ul{
+                font-size: Rem(18);
+                text-transform: capitalize;
+                li#li1{animation-delay: 1.7s;}
+                li#li2{animation-delay: 2.4s;}
+                li#li3{animation-delay: 3.1s;}
+                li#li4{animation-delay: 3.8s;}
+                li#li5{animation-delay: 4.5s;}
+                li#li6{animation-delay: 5.2s;}
+                li#li7{animation-delay: 5.9s;}
+            }
+            button{
+                color: #fff;
+                background: $secondColor;
+                animation-delay: 6.6s;
+                border:none;
+                padding: Rem(10);
+                margin-top: Rem(25);
+            }
+            button:hover{
+                background: $shadeColor;
+            }
+            button:active{
+                background: $secondColor;
+            }
+        }
+    }
+}
 }
