@@ -73,6 +73,7 @@ header{
     }
     nav{
         button{
+            position: relative;
             float: right;
             background-color: $firstColor;
             color: #fff;
@@ -81,14 +82,15 @@ header{
             border-radius: Rem(2);
             width: Rem(25)
         }
-        ul.menu{
-            margin-top: Rem(8);
-            display: block;
+        ul#menu{
+            margin-top: Rem(30);
+            display:none;
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
+            transition: ease;
             a{
-                display: none;
+                display: block;
                 color:#fff;
                 padding:Rem(5);
             }
@@ -184,11 +186,24 @@ section.galeria{
         text-align: center;
         padding: Rem(20);
         img{
-            width: 200px;
-            height: 150px;
+            max-width: 500px;
+            width: 100%;
+            height: auto;
             border: Rem(5) #fff solid;
-            margin: Rem(15);
             border-radius: 5px;
+        }
+    }
+    .gallery-controls{
+        color:#fff;
+        text-align: center;
+        button{
+            background: transparent;
+            font-size: Rem(48);
+            color: #fff;
+            border: none;
+        }
+        button:nth-child(2){
+            margin-left: Rem(60);
         }
     }
 }
@@ -212,6 +227,12 @@ footer{
     i:nth-child(odd){
         margin: Rem(15);
         font-size: Rem(28);
+    }
+    .copyright{
+        font-size: Rem(20);
+    }
+    small{
+        font-weight: bold;
     }
 }
 
