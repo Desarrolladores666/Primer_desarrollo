@@ -40,20 +40,53 @@ ul, ol, li {
   text-align: center;
 }
 
+.angle-top {
+  position: fixed;
+  display: block;
+  z-index: 10;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  right: 10px;
+  bottom: 55px;
+  background: #E04252;
+  width: 60px;
+  height: 60px;
+  padding-top: 0;
+}
+.angle-top i {
+  margin: 0 auto;
+  line-height: 1px;
+}
+
 header {
   padding: 0.625rem 0;
   background-color: #232a34;
   display: flex;
   position: absolute;
+  z-index: 5;
   width: 100%;
 }
 header .container {
   width: 100%;
 }
 header strong {
+  font-size: 1.25rem;
+  display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 900;
   color: #fff;
+}
+header strong div {
+  padding-top: 5px;
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  color: #fff;
+  background: #05a081;
+  text-align: center;
+  border-radius: 50%;
 }
 header nav button {
   position: relative;
@@ -86,6 +119,7 @@ header nav ul#menu a:hover {
 section.hero {
   background: url("../images/pexels-photo-8949.jpg") no-repeat center top;
   background-size: cover;
+  background-attachment: fixed;
   height: 75vh;
   padding-top: 25vh;
   text-align: center;
@@ -208,6 +242,24 @@ footer .copyright {
 }
 footer small {
   font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav button {
+    display: none;
+  }
+  header nav ul#menu {
+    margin: 0px;
+    display: inline-block;
+  }
+  header nav ul#menu li {
+    display: inline-block;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -53,6 +53,25 @@ ul,ol,li{
     padding: Rem(15);
     text-align: center;
 }
+.angle-top{
+    position:fixed;
+    display: block;
+    z-index:10;
+    color: #fff;
+    font-size: Rem(48);
+    text-align: center;
+    border-radius: 50%;
+    right: 10px;
+    bottom: 55px;
+    background:$secondColor;
+    width: 60px;
+    height: 60px;
+    padding-top: 0;
+    i{
+        margin: 0 auto;
+        line-height: 1px;
+    };
+}
 ///////////////////////
 //HEADER
 ///////////////////////
@@ -61,16 +80,30 @@ header{
     background-color: $darkGrey;
     display: flex;
     position:absolute;
+    z-index: 5;
     width: 100%;
     .container{
         width: 100%;
 
     }
     strong{
+        font-size: Rem(20);
+        display: inline-block;
         font-family: $fontLogo;
         font-weight: 900;
         color:#fff;
+        div{
+            padding-top: 5px;
+            display: inline-block;
+            width: 35px;
+            height: 30px;
+            color:#fff;
+            background: $firstColor;
+            text-align: center;
+            border-radius: 50%;
+        }
     }
+
     nav{
         button{
             position: relative;
@@ -107,6 +140,7 @@ header{
 section.hero{
     background:url('../images/pexels-photo-8949.jpg') no-repeat center top;
     background-size: cover;
+    background-attachment: fixed;
     height:75vh;
     padding-top: 25vh;
     text-align: center;  
@@ -206,7 +240,7 @@ section.galeria{
             margin-left: Rem(60);
         }
     }
-}
+}                                                                                                                                                                                                   
 ///////////////////////
 //FOOTER
 ///////////////////////
@@ -235,4 +269,27 @@ footer{
         font-weight: bold;
     }
 }
+///////////////////////////////////////////////////////////////////////
+//BREAKPOINT MIN-WIDTH 736PX
+//////////////////////////////////////////////////////////////////////
+@media only screen and (min-width: 768px){
+    header{
 
+        nav{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button{
+                display:none;
+            }
+            ul#menu{
+                margin: 0px;
+                display:inline-block;
+                li{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
