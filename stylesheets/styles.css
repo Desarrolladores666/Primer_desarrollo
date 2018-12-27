@@ -1,0 +1,192 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #232a34;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: medium;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  padding: 0px 0.9375rem;
+}
+
+.title-section {
+  color: #fff;
+  background: #05a081;
+  margin: 0;
+  text-transform: uppercase;
+  padding: 0.9375rem;
+  text-align: center;
+}
+
+header {
+  padding: 0.625rem 0;
+  background-color: #232a34;
+  display: flex;
+  position: absolute;
+  width: 100%;
+}
+header .container {
+  width: 100%;
+}
+header strong {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+header nav button {
+  float: right;
+  background-color: #05a081;
+  color: #fff;
+  border: none;
+  padding: 0.3125rem;
+  border-radius: 0.125rem;
+  width: 1.5625rem;
+}
+header nav ul.menu {
+  margin-top: 0.5rem;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+header nav ul.menu a {
+  display: none;
+  color: #fff;
+  padding: 0.3125rem;
+}
+header nav ul.menu a:hover {
+  background: #05a081;
+  color: #fff;
+}
+
+section.hero {
+  background: url("../images/pexels-photo-8949.jpg") no-repeat center top;
+  background-size: cover;
+  height: 75vh;
+  padding-top: 25vh;
+  text-align: center;
+}
+section.hero h1 {
+  font-size: 3rem;
+  line-height: 0.75rem;
+  font-weight: bold;
+  position: relative;
+  text-shadow: #232a34 0 0 2px;
+}
+section.hero p {
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 35vh;
+}
+section.hero i {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: #232a34 0 0 1px;
+  animation-name: arrow-down;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+@keyframes arrow-down {
+  0% {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: 25px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+section.nosotros {
+  background: #232a34;
+  color: #fff;
+  padding-bottom: 0.625rem;
+}
+section.nosotros .descripcion h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+section.nosotros .descripcion p {
+  text-align: justify;
+}
+
+section.productos {
+  color: #232a34;
+  padding-bottom: 0.625rem;
+}
+section.productos .container {
+  padding: 0.9375rem;
+}
+section.productos .producto {
+  padding: 0.9375rem;
+  margin-bottom: 0.625rem;
+  text-align: center;
+}
+section.productos .producto img {
+  width: 200px;
+  height: 150px;
+  border: 0.3125rem #232a34 solid;
+  border-radius: 5px;
+}
+section.productos .producto p {
+  text-align: justify;
+}
+
+section.galeria {
+  background-color: #232a34;
+}
+section.galeria .gallery-container {
+  text-align: center;
+  padding: 1.25rem;
+}
+section.galeria .gallery-container img {
+  width: 200px;
+  height: 150px;
+  border: 0.3125rem #fff solid;
+  margin: 0.9375rem;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 0.9375rem;
+  background: #05a081;
+  color: #fff;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.9375rem;
+}
+footer a {
+  color: #232a34;
+}
+footer i:nth-child(odd) {
+  margin: 0.9375rem;
+  font-size: 1.75rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -4,84 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/animate.css">
     <link rel="stylesheet" href="./stylesheets/all.css">
     <link rel="stylesheet" href="./stylesheets/styles.css">
     <title>Marvel Fruits | La mejor opcion del mercado</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="#"><strong>Marvel-Fruits</strong></a>
+        <div class="container">                                                                                                                                                                                                                                                                                                                                                                             
             <nav>
+                <a href="#"><strong>Marvel-Fruits</strong></a>
+                <button id="btnResponsive">
+                    <i class="fa fa-bars"></i>
+                </button>
                 <ul id="menu" class="menu">
                     <li><a href="#nosotros">nosotros</a></li>
                     <li><a href="#productos">productos</a></li>
                     <li><a href="#galeria">galeria</a></li>
                     <li><a href="#">login</a></li>
                 </ul>
-                <button id="btnResponsive">
-                    <i class="fa fa-bars"></i>
-                </button>
             </nav>
         </div>
     </header>
     <section class="hero">
         <div class="container">    
-            <h1>Marvel-fuits</h1>
-            <p>Tu mejor Opcion!</p>
-            <a href="#">
+            <h1 class="animated bounceInLeft slow">Marvel-fuits</h1>
+            <p class="animated bounceInRight slow">¿Buscas frescura?</p>
+            <a href="#nosotros">
                 <i class="fas fa-angle-down"></i>
             </a>
         </div>
     </section>
     <section class="nosotros" id="nosotros">
+        <h3 class="title-section">nosotros</h3>
         <div class="container">
-            <h3 class="title-section">nosotros</h3>
             <article>
                 <div class="descripcion">
                     <h5>compromiso</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet est, quibusdam ullam voluptate reiciendis hic, praesentium libero laudantium repudiandae et deleniti! Possimus molestiae vel, magni ducimus laudantium temporibus rerum ad!</p>
                 </div>
                 <div class="descripcion">
-                    <h5>compromiso</h5>
+                    <h5>amabilidad</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet est, quibusdam ullam voluptate reiciendis hic, praesentium libero laudantium repudiandae et deleniti! Possimus molestiae vel, magni ducimus laudantium temporibus rerum ad!</p>
                 </div>
                 <div class="descripcion">
-                    <h5>compromiso</h5>
+                    <h5>precios</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet est, quibusdam ullam voluptate reiciendis hic, praesentium libero laudantium repudiandae et deleniti! Possimus molestiae vel, magni ducimus laudantium temporibus rerum ad!</p>
                 </div>                
             </article>
         </div>
     </section>
     <section class="productos" id="productos">
+        <h3 class="title-section">nuestros prductos</h3>
         <div class="container">
-            <h3 class="title-section">nuestros prductos</h3>
             <div class="producto">
-                <img src="#" alt="Imagen de una fruta">
+                <img src="./images/fruta1.jpeg" alt="Imagen de una fruta">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea exercitationem, voluptatum provident culpa placeat veritatis reiciendis laboriosam, error ipsum ut ab recusandae enim quis, illo dolor? Possimus, accusantium nam?
                 </p>
             </div>
             <div class="producto">
-                <img src="#" alt="Imagen de una fruta">
+                <img src="./images/fruta2.jpg" alt="Imagen de una fruta">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea exercitationem, voluptatum provident culpa placeat veritatis reiciendis laboriosam, error ipsum ut ab recusandae enim quis, illo dolor? Possimus, accusantium nam?
                 </p>
             </div>
             <div class="producto">
-                <img src="#" alt="Imagen de una fruta">
+                <img src="./images/fruta3.jpeg" alt="Imagen de una fruta">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea exercitationem, voluptatum provident culpa placeat veritatis reiciendis laboriosam, error ipsum ut ab recusandae enim quis, illo dolor? Possimus, accusantium nam?
                 </p>
             </div>
             <div class="producto">
-                <img src="#" alt="Imagen de una fruta">
+                <img src="./images/fruta4.jpeg" alt="Imagen de una fruta">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea exercitationem, voluptatum provident culpa placeat veritatis reiciendis laboriosam, error ipsum ut ab recusandae enim quis, illo dolor? Possimus, accusantium nam?
                 </p>
             </div>
             <div class="producto">
-                <img src="#" alt="Imagen de una fruta">
+                <img src="./images/fruta5.jpeg" alt="Imagen de una fruta">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ea exercitationem, voluptatum provident culpa placeat veritatis reiciendis laboriosam, error ipsum ut ab recusandae enim quis, illo dolor? Possimus, accusantium nam?
                 </p>
@@ -89,23 +91,35 @@
         </div>    
     </section>
     <section class="galeria" id="galeria">
+        <h3 class="title-section">galeria</h3>
         <div class="container">
-            <h3 class="title-section">galeria</h3>
             <div class="gallery-container">
-                <img src="" alt="persona trabajando" class="images">
-                <img src="" alt="persona vendiendo" class="images">
-                <img src="" alt="persona cosechando" class="images">
-                <img src="" alt="almacen" class="images">
-                <img src="" alt="tienda" class="images">
-                <img src="" alt="atendiendo al publico" class="images">
-                <img src="" alt="ofertas" class="images">
-                <img src="" alt="cliente comiendo" class="images">
-                <img src="" alt="cliente feliz" class="images">
-                <img src="" alt="cliente saliendo de la tienda" class="images">
+                <img src="./images/galeria1.jpeg" alt="persona trabajando" class="images">
+                <img src="./images/galeria2.jpeg" alt="persona vendiendo" class="images">
+                <img src="./images/galeria3.jpeg" alt="persona cosechando" class="images">
+                <img src="./images/galeria4.jpeg" alt="almacen" class="images">
+                <img src="./images/galeria5.jpeg" alt="tienda" class="images">
+                <img src="./images/galeria6.jpeg" alt="atendiendo al publico" class="images">
+                <img src="./images/galeria7.jpeg" alt="ofertas" class="images">
+                <img src="./images/galeria8.jpeg" alt="cliente comiendo" class="images">
+                <img src="./images/galeria9.jpeg" alt="cliente feliz" class="images">
+                <img src="./images/galeria10.jpg" alt="cliente saliendo de la tienda" class="images">
             </div>
         </div>    
     </section>
     <footer>
+        <a href="#">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#">
+            <i class="fab fa-github"></i>
+        </a>
         <div class="container">
             <small>COPYRAIGHT 2018</small>
             <small>CREADO POR MARVELEND'S</small>

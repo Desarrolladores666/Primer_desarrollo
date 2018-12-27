@@ -1,0 +1,217 @@
+///////////////////////
+//SETUP-SASS
+///////////////////////
+@function Rem($px){
+    $remSize:$px/16;
+    @return #{$remSize}rem;
+}
+$firstColor:#05a081;
+$secondColor:#E04252;
+$thirdColor:#A9196F;
+//shadesColor
+$darkGrey:#232a34;
+$lightGrey:#cccccc;
+$shadeColor:#C63A49;
+//fonts
+$fontLogo:'Montserrat Alternates', sans-serif;
+$fontTitles:'Quicksand', sans-serif;
+///////////////////////
+//SETUP-GENERAL
+///////////////////////
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body{
+    color: $darkGrey;
+    padding: 0;
+    margin: 0;
+    font-family: $fontTitles;
+    font-weight: lighter;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $fontTitles;
+    font-weight: medium;
+}
+a,a:hover{
+    text-decoration: none;
+}
+ul,ol,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container{
+    padding: 0px Rem(15);
+}
+.title-section{
+    color: #fff;
+    background: $firstColor;
+    margin: 0;
+    text-transform: uppercase;
+    padding: Rem(15);
+    text-align: center;
+}
+///////////////////////
+//HEADER
+///////////////////////
+header{
+    padding: Rem(10) 0;
+    background-color: $darkGrey;
+    display: flex;
+    position:absolute;
+    width: 100%;
+    .container{
+        width: 100%;
+
+    }
+    strong{
+        font-family: $fontLogo;
+        font-weight: 900;
+        color:#fff;
+    }
+    nav{
+        button{
+            float: right;
+            background-color: $firstColor;
+            color: #fff;
+            border: none;
+            padding: Rem(5);
+            border-radius: Rem(2);
+            width: Rem(25)
+        }
+        ul.menu{
+            margin-top: Rem(8);
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            a{
+                display: none;
+                color:#fff;
+                padding:Rem(5);
+            }
+            a:hover{
+                background: $firstColor;
+                color:#fff;
+            }
+        }
+    }
+}
+///////////////////////
+//HERO-SECTION
+///////////////////////
+section.hero{
+    background:url('../images/pexels-photo-8949.jpg') no-repeat center top;
+    background-size: cover;
+    height:75vh;
+    padding-top: 25vh;
+    text-align: center;  
+    h1{
+        font-size: Rem(48);
+        line-height: Rem(12);
+        font-weight: bold;
+        position: relative;
+        text-shadow: #232a34 0 0 2px;     
+    }
+    p{
+        font-weight: bold;
+        font-style: italic;
+        margin-bottom: 35vh;  
+    }
+    i{
+        font-size: Rem(48);
+        color: #fff;
+        text-shadow: #232a34 0 0 1px;
+        animation-name: arrow-down;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+    }
+    @keyframes arrow-down {
+        0%{margin-top: 0px;}
+        50%{margin-top: 25px;}
+        100%{margin-top: 0px;}
+    }
+}
+///////////////////////
+//Nosotros
+///////////////////////
+section.nosotros{
+    background: $darkGrey;
+    color:#fff;
+    padding-bottom: Rem(10);
+    .descripcion{
+        h5{
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        p{
+            text-align: justify;
+        }
+    }
+}
+///////////////////////
+//PRODUCTOS
+///////////////////////
+section.productos{
+    color:$darkGrey;
+    padding-bottom: Rem(10);
+    .container{
+        padding: Rem(15);
+    }
+    .producto{
+        padding: Rem(15);
+        margin-bottom: Rem(10);
+        text-align: center;
+        img{
+            width: 200px;
+            height: 150px;
+            border: Rem(5) $darkGrey solid;
+            border-radius: 5px;
+        }
+        p{
+            text-align: justify;
+        }
+    }
+}
+///////////////////////
+//GALERIA
+///////////////////////
+section.galeria{
+    background-color: $darkGrey;
+    .gallery-container{
+        text-align: center;
+        padding: Rem(20);
+        img{
+            width: 200px;
+            height: 150px;
+            border: Rem(5) #fff solid;
+            margin: Rem(15);
+            border-radius: 5px;
+        }
+    }
+}
+///////////////////////
+//FOOTER
+///////////////////////
+footer{
+    text-align: center;
+    padding: Rem(15);
+    background: $firstColor;
+    color: #fff;
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: Rem(15);
+    }
+    a{
+        color: $darkGrey;
+    }
+    i:nth-child(odd){
+        margin: Rem(15);
+        font-size: Rem(28);
+    }
+}
+
