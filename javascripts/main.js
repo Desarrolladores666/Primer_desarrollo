@@ -29,3 +29,20 @@ $('#back').on('click',()=>{
     $('.images:eq('+n+')').show();
 });
 })
+///////////////////////////////////////
+//GO TO TOP
+///////////////////////////////////////
+let go2Top = $('#go2Top');
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+        go2Top.fadeIn();
+    } else {
+        go2Top.fadeOut();
+    }
+});
+go2Top.click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 800);
+    return false;
+});
