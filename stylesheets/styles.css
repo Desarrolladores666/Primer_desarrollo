@@ -40,22 +40,64 @@ ul, ol, li {
   text-align: center;
 }
 
+.angle-top {
+  position: fixed;
+  display: block;
+  z-index: 10;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  right: 10px;
+  bottom: 55px;
+  background: #E04252;
+  width: 60px;
+  height: 60px;
+  padding-top: 0;
+}
+.angle-top i {
+  margin: 0 auto;
+  line-height: 1px;
+}
+
+.angle-top:hover {
+  background-color: #E04252;
+}
+
+.angle-top:active {
+  background-color: #E04252;
+}
+
 header {
   padding: 0.625rem 0;
   background-color: #232a34;
   display: flex;
   position: absolute;
+  z-index: 5;
   width: 100%;
 }
 header .container {
   width: 100%;
 }
 header strong {
+  font-size: 1.25rem;
+  display: inline-block;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 900;
   color: #fff;
 }
+header strong div {
+  padding-top: 5px;
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  color: #fff;
+  background: #05a081;
+  text-align: center;
+  border-radius: 50%;
+}
 header nav button {
+  position: relative;
   float: right;
   background-color: #05a081;
   color: #fff;
@@ -64,19 +106,26 @@ header nav button {
   border-radius: 0.125rem;
   width: 1.5625rem;
 }
-header nav ul.menu {
-  margin-top: 0.5rem;
-  display: block;
+header nav button:hover {
+  background: #058a6f;
+}
+header nav button:active {
+  background: #05a081;
+}
+header nav ul#menu {
+  margin-top: 1.875rem;
+  display: none;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
+  transition: ease;
 }
-header nav ul.menu a {
-  display: none;
+header nav ul#menu a {
+  display: block;
   color: #fff;
   padding: 0.3125rem;
 }
-header nav ul.menu a:hover {
+header nav ul#menu a:hover {
   background: #05a081;
   color: #fff;
 }
@@ -84,11 +133,17 @@ header nav ul.menu a:hover {
 section.hero {
   background: url("../images/pexels-photo-8949.jpg") no-repeat center top;
   background-size: cover;
-  height: 75vh;
-  padding-top: 25vh;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
   text-align: center;
+  position: relative;
+}
+section.hero .hero-contact {
+  display: none;
 }
 section.hero h1 {
+  padding-top: 25vh;
   font-size: 3rem;
   line-height: 0.75rem;
   font-weight: bold;
@@ -163,11 +218,24 @@ section.galeria .gallery-container {
   padding: 1.25rem;
 }
 section.galeria .gallery-container img {
-  width: 200px;
-  height: 150px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
   border: 0.3125rem #fff solid;
-  margin: 0.9375rem;
   border-radius: 5px;
+}
+section.galeria .gallery-controls {
+  color: #fff;
+  text-align: center;
+}
+section.galeria .gallery-controls button {
+  background: transparent;
+  font-size: 3rem;
+  color: #fff;
+  border: none;
+}
+section.galeria .gallery-controls button:nth-child(2) {
+  margin-left: 3.75rem;
 }
 
 footer {
@@ -187,6 +255,88 @@ footer a {
 footer i:nth-child(odd) {
   margin: 0.9375rem;
   font-size: 1.75rem;
+}
+footer .copyright {
+  font-size: 1.25rem;
+}
+footer small {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav button {
+    display: none;
+  }
+  header nav ul#menu {
+    margin: 0px;
+    display: inline-block;
+  }
+  header nav ul#menu li {
+    display: inline-block;
+  }
+
+  section.hero .container .hero-main h1 {
+    font-size: 3.75rem;
+  }
+  section.hero .container .hero-main p {
+    font-size: 1.5625rem;
+  }
+  section.hero .container .hero-contact {
+    display: block;
+    width: 45vh;
+    position: absolute;
+    color: #fff;
+    height: 100vh;
+    background: linear-gradient(rgba(35, 42, 52, 0.5), rgba(35, 42, 52, 0.5));
+  }
+  section.hero .container .hero-contact h2 {
+    padding-top: 10vh;
+    animation-delay: 1s;
+  }
+  section.hero .container .hero-contact ul {
+    font-size: 1.125rem;
+    text-transform: capitalize;
+  }
+  section.hero .container .hero-contact ul li#li1 {
+    animation-delay: 1.7s;
+  }
+  section.hero .container .hero-contact ul li#li2 {
+    animation-delay: 2.4s;
+  }
+  section.hero .container .hero-contact ul li#li3 {
+    animation-delay: 3.1s;
+  }
+  section.hero .container .hero-contact ul li#li4 {
+    animation-delay: 3.8s;
+  }
+  section.hero .container .hero-contact ul li#li5 {
+    animation-delay: 4.5s;
+  }
+  section.hero .container .hero-contact ul li#li6 {
+    animation-delay: 5.2s;
+  }
+  section.hero .container .hero-contact ul li#li7 {
+    animation-delay: 5.9s;
+  }
+  section.hero .container .hero-contact button {
+    color: #fff;
+    background: #E04252;
+    animation-delay: 6.6s;
+    border: none;
+    padding: 0.625rem;
+    margin-top: 1.5625rem;
+  }
+  section.hero .container .hero-contact button:hover {
+    background: #C63A49;
+  }
+  section.hero .container .hero-contact button:active {
+    background: #E04252;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
